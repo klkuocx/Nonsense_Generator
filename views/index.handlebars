@@ -12,7 +12,7 @@
           class="card-img-top img-fluid" alt="angry-developer">
         <div class="card-body d-flex justify-content-center align-items-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="developer" name="target" class="custom-control-input">
+            <input type="radio" id="developer" name="target" class="custom-control-input" value="developer">
             <label class="custom-control-label" for="developer">
               <h5 class="card-title">工程師 <i class="fas fa-laptop-code"></i></h5>
             </label>
@@ -25,7 +25,7 @@
           class="card-img-top img-fluid" alt="angry-designer">
         <div class="card-body d-flex justify-content-center align-items-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="designer" name="target" class="custom-control-input">
+            <input type="radio" id="designer" name="target" class="custom-control-input" value="designer">
             <label class="custom-control-label" for="designer">
               <h5 class="card-title">設計師 <i class="far fa-image"></i></h5>
             </label>
@@ -38,7 +38,7 @@
           class="card-img-top img-fluid" alt="angry-founder">
         <div class="card-body d-flex justify-content-center align-items-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="founder" name="target" class="custom-control-input">
+            <input type="radio" id="founder" name="target" class="custom-control-input" value="founder">
             <label class="custom-control-label" for="founder">
               <h5 class="card-title">創業家 <i class="fas fa-briefcase"></i></h5>
             </label>
@@ -52,7 +52,9 @@
       <div class="card col-8">
         <div class="card-body d-flex justify-content-around align-items-center">
           <h4>
-            身為工程師，加個功能 ，很容易吧！
+            {{#if nonsense}}
+            {{nonsense}}
+            {{/if}}
           </h4>
         </div>
       </div>

@@ -4,7 +4,7 @@ function sample(array) {
   return array[index]
 }
 
-function generateNonsense() {
+function generateNonsense(option) {
   // define tasks for different roles and nonsense phrases
   const targets = {
     developer: '工程師',
@@ -18,8 +18,10 @@ function generateNonsense() {
   }
   const phrases = ['很簡單', '很容易', '很快', '很正常', '很愜意', '很輕鬆', '小事一件', '就像呼吸一樣', '就像喝杯水', '難不倒你']
 
-  // define dummy data
-  const option = 'developer'
+  // return error message
+  if (!option) {
+    return `身為幹話王，記得選對象，很容易吧！`
+  }
 
   // start generating task and phrase of nonsense for selected role
   const target = targets[option]
@@ -27,6 +29,6 @@ function generateNonsense() {
   const phrase = sample(phrases)
 
   // return the generated nonsense
-  console.log(`身為${target}，${task} ，${phrase}吧！`)
+  return `身為${target}，${task}，${phrase}吧！`
 }
-generateNonsense()
+module.exports = generateNonsense
