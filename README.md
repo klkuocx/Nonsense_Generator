@@ -23,7 +23,7 @@ user can pick up different role to generate nonsense
 
 3. Install packages
 ```
-[~/Nonsense_Generator] $ npm Install
+[~/Nonsense_Generator] $ npm install
 ```
 
 4. Run the project
